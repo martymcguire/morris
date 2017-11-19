@@ -115,3 +115,5 @@ The content inside of a given mention looks something like:
 ## License
 
 Copyright 2017 by [Marty McGuire](https://martymcgui.re/)
+
+Licensed under the [MIT License](LICENSE).
