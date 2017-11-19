@@ -1,0 +1,14 @@
+<?php
+
+/**
+* Example publish function - when your static site lives on the same machine
+* that this service runs on.
+* Your publish function can do anything that PHP can do, so replace this and
+* go wild! Trigger remote web hooks! Shell out to Python! I literally have
+* no idea how your site is set up.
+* More power to you!
+*/
+function publish() {
+	chdir( "/path/to/your/hugo/site");
+	echo shell_exec( "hugo --destination /path/to/your/deployed/site" );
+}

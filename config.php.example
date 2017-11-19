@@ -1,0 +1,18 @@
+<?php
+define('WMIO_WEBHOOK_TOKEN', 'A SECRET THAT YOU GIVE TO WEBMENTION.IO');
+define('WMIO_API_TOKEN', 'A SECRET THAT WEBMENTION.IO GIVES TO YOU');
+define('WMIO_DOMAIN', 'yourdoma.in');
+define('APP_DATA_DIR', 'data/mentions');
+define('APP_INDEX_PATH', 'data/index.json');
+// PHP 5.6+ style
+/*
+const APP_PASSTHROUGH_URLS = array(
+	"https://yourdoma.in/some/web/hook",
+);
+*/
+// PHP 7 style
+/*
+define('APP_PASSTHROUGH_URLS', array(
+	"https://bot.maktro.net/hubot/wmio/notify",
+));
+*/
