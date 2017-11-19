@@ -62,7 +62,7 @@ The index, stored at `APP_INDEX_PATH`, contains a JSON object of the form:
 
 ```json
 {
-	'/some/path/on/your/site.html`: [
+	'/some/path/on/your/site.html': [
 		'SOMEKEY',
 		'ANOTHERKEY',
 		'YETANOTHERKEY',
