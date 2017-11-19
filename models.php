@@ -8,7 +8,11 @@ class Webmention {
 
 	public function __construct($mention) {
 		$this->data = $mention;
-		$this->targetUrl = $mention[$mention['wm-property']];
+		$prop = $mention['wm-property'];
+		if ($prop == 'rsvp') {
+			$prop = "in-reply-to";
+		}
+		$this->targetUrl = $mention[$prop];
 		$this->sourceUrl = $mention['url'];
 		$this->mentionId = hash('sha256', $this->sourceUrl . $this->targetUrl);
 	}
