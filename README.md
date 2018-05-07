@@ -62,10 +62,10 @@ The index, stored at `APP_INDEX_PATH`, contains a JSON object of the form:
 
 ```json
 {
-	'/some/path/on/your/site.html': [
-		'SOMEKEY',
-		'ANOTHERKEY',
-		'YETANOTHERKEY',
+	"/some/path/on/your/site.html": [
+		"SOMEKEY",
+		"ANOTHERKEY",
+		"YETANOTHERKEY",
 		...
 	],
 	...
@@ -85,7 +85,7 @@ configure Morris to write into a symlink'd folder*).
 Now you can look up all mentions for a given Page:
 
 ```
-{{ $mention_id := index $.Site.Data.webmention_io.index .URL }}
+{{ $mention_ids := index $.Site.Data.webmention_io.index .URL }}
 {{ $mentions := apply $mention_ids "index" $.Site.Data.webmention_io.mentions "." }}
 {{ $mentions := sort $mentions "wm-received" }}
 {{ range $mentions }}
