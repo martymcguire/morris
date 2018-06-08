@@ -22,8 +22,8 @@ class Webmention {
 class WebmentionStore {
 	public function add_mention($mention) {
 		$file_path = APP_DATA_DIR . DIRECTORY_SEPARATOR . $mention->mentionId . ".json";
-        $mention->data['published'] = $mention->data['published'] ?? $mention->data['wm-received'];
-        file_put_contents(
+		$mention->data['published'] = $mention->data['published'] ?? $mention->data['wm-received'];
+		file_put_contents(
 			$file_path, 
 			json_encode($mention->data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
 		);
